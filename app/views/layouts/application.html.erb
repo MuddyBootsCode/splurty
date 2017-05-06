@@ -18,11 +18,11 @@
           <%= link_to root_path, class: 'logo' do %>
             <div class="circle">
               <br />
-              You know
+              Learn to
               <br />
-              you need
+              code 
               <br />
-              to code
+              with the best
             </div>
           <% end %>
         </div> 
@@ -30,12 +30,7 @@
           Random Quotes from Strangers and Friends 
         </div>
         <div class="col-2 links">
-        <!-- Button Trigger Modal -->
-          
           <%= link_to 'Contribute', '#', data: {toggle: 'modal', target: '#myModal'} %>
-
-          </button>
-         <!--  <%= link_to 'Contribute', new_quote_path %> -->
         </div>
         <div class="col-2 links">
           <%= link_to 'About', about_path %>
@@ -57,8 +52,9 @@
              
               <%= simple_form_for Quote.new do |f| %>
                 <div class="modal-body">
-                  <%= f.input :saying %>
-                  <%= f.input :author %>
+                  <%= f.input :saying, label: "Please add your saying or quote here.", placeholder: "Fear is the disease. Hustle is the antidote" %>
+                  <br />
+                  <%= f.input :author, label: "Whos is the author of your quote?", placeholder: "Travis Kalanick" %>
                 </div>
                 <div class="modal-footer">
                   <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
@@ -87,10 +83,10 @@
     <div class="footer">
       <div class="container">
         <div class="row">
-          <div class="col-6">
+          <div class="col-12 col-sm-6">
             <%= link_to "This isn't enough, show me more!", root_path, class: 'next-quote' %>
           </div>
-          <div class="col-6 footer-blurb">
+          <div class="col-12 col-sm-6 footer-blurb">
             Proudly hacked in Midland, TX by <a href="http://michaelporter.getforge.io">Michael Porter</a></br>
             Want to build your own Web Apps? - <a href="http://thefirehoseproject.com"> Learn how to code here</a>
           </div>
