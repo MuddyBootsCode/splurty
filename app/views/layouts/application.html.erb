@@ -1,6 +1,12 @@
 <!DOCTYPE html>
-<html>
+<html lang="en">
+
   <head>
+
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+
     <title>Quotey McQuoteface</title>
 
     <%= csrf_meta_tags %>
@@ -9,38 +15,38 @@
 
     <%= javascript_include_tag 'application', 'data-turbolinks-track': 'reload' %>
 
-    <meta name="viewport" content="width=device-width, initial-scale=1">
-
-
-
   </head>
 
   <body>
 
-    <div class="container-fluid">
-        <header class="row">
-          <div class="col-2">
-            <%= link_to root_path, class: 'logo' do %>
-              <div class="circle">
-                <br />
-                Share your
-                <br />
-                favorite quotes
-                <br />
-                and sayings!
-              </div>
-            <% end %>
-          </div> 
-          <div class="col-6 slogan">
-            Random Quotes from Strangers and Friends 
-          </div>
-          <div class="col-2 links">
-            <%= link_to 'Contribute', '#', data: {toggle: 'modal', target: '#myModal'} %>
-          </div>
-          <div class="col-2 links">
-            <%= link_to 'About', about_path %>
-          </div>
-      </header>
+   
+        <header>
+        <div class="container">
+          
+            <div class="col-xs-12 col-2" align="center">
+              <%= link_to root_path, class: 'logo' do %>
+                <div class="circle">
+                  <br />
+                  Share your
+                  <br />
+                  favorite quotes
+                  <br />
+                  and sayings!
+                </div>
+              <% end %>
+            </div> 
+            <div class="col-xs-12 col-6 slogan">
+              Random Quotes from Strangers and Friends 
+            </div>
+            <div class="col-xs-6 col-2 links">
+              <%= link_to 'Contribute', '#', data: {toggle: 'modal', target: '#myModal'} %>
+            </div>
+            <div class="col-xs-6 col-2 links">
+              <%= link_to 'About', about_path %>
+            </div>
+          
+        </div>
+        </header>
 
       
 
@@ -74,7 +80,7 @@
 
         <br clear="clear" />
 
-      <div class="container">  
+      <div class="container-fluid">  
 
         <%if flash[:error].present? %>
           <div class="col-10 offset -1 alert alert-danger">
@@ -98,6 +104,7 @@
           </div>
         </div>
       </div>
-    </div>
+    
+
   </body>
 </html>
