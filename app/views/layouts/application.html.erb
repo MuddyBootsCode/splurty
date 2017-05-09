@@ -19,13 +19,46 @@
 
   <body>
 
-   
+          <!--  <header>
+           <div class="container">
+             <div class="row" align="center">
+               <div class="col-12" align="center">
+                 <%= link_to root_path, class: 'logo' do %>
+                   <div class="circle" align="center">
+                     <br />
+                     Share your
+                     <br />
+                     favorite quotes
+                     <br />
+                     and sayings!
+                   </div>
+                 <% end %>
+               </div>
+             </div>
+             <div class="row" align="center"> 
+
+               <div class="col-6 col-xs-12 slogan" align="center">
+                 Random Quotes from Strangers and Friends 
+               </div>
+              
+              
+               <div class="col-3 col-xs-6 links">
+                 <%= link_to 'Contribute', '#', data: {toggle: 'modal', target: '#myModal'} %>
+               </div>
+               <div class="col-3 col-xs-6 links">
+                 <%= link_to 'About', about_path %>
+               </div>
+             </div>   
+             
+           </div>
+           </header>
+  -->
         <header>
         <div class="container">
-          <div class="row">
-            <div class="col-xs-12 col" align="center">
+          <div class="row" align="center">
+            <div class="col-12" align="center">
               <%= link_to root_path, class: 'logo' do %>
-                <div class="circle">
+                <div class="circle" align="center">
                   <br />
                   Share your
                   <br />
@@ -34,25 +67,26 @@
                   and sayings!
                 </div>
               <% end %>
-            </div> 
             </div>
-              <div class="row">
-              <div class="col-xs-12 col slogan" align="center">
-                  Random Quotes from Strangers and Friends 
-              </div>
-              </div>
-              <div class="row" align="center">
-              <div class="col-xs-6 col-6 links">
-                <%= link_to 'Contribute', '#', data: {toggle: 'modal', target: '#myModal'} %>
-              </div>
-              <div class="col-xs-6 col-6 links">
-                <%= link_to 'About', about_path %>
-              </div>
-              </div>
-          
+          </div>
+          <div class="row"> 
+            <div class="col-12 slogan" align="center">
+              Random Quotes from Strangers and Friends 
+            </div>
+           </div>
+           <div class="row" align="center">   
+            <div class="col-6 links">
+              <%= link_to 'Contribute', '#', data: {toggle: 'modal', target: '#myModal'} %>
+            </div>
+            <div class="col-6 links">
+              <%= link_to 'About', about_path %>
+            </div>
+          </div>   
+          </div>
         </div>
         </header>
-
+        
+     
       
 
          <!-- Modal -->
@@ -85,7 +119,7 @@
 
         <br clear="clear" />
 
-      <div class="container-fluid">  
+      <div class="container">  
 
         <%if flash[:error].present? %>
           <div class="col-10 offset -1 alert alert-danger">
