@@ -2,9 +2,20 @@
 
 <%= simple_form_for @quote do |f| %>
 
-  <%= f.input :saying %>
-  <%= f.input :author %>
-  <br />
-  <%= f.submit 'Create', class: 'btn btn-danger' %>
+  <form>
+    <div class="form-group">
+      <label for="saying">Saying</label>
+        <%= f.input :saying, label: false, placeholder: 'Your quote here', input_html: { class: 'form-control' } %>
+    </div>
+    <div class="form-group">
+      <label for="author">Author</label>
+        <%= f.input :author, label: false, placeholder: 'Author', input_html: { class: 'form-control'} %>
+    </div>
+        <br />
+        <%= f.submit 'Create', class: 'btn btn-danger' %>
+
+
+    </div>
+  </form>
 
 <% end %>
